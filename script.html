@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="HCI_FinalProject_Website.css" href="script">
+
+    <script>
+        function selectProduct(item) {
+            document.getElementById('selectedItem').value = item;
+        }
+
+        document.getElementById("orderForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("buyerName").value;
+            const email = document.getElementById("email").value;
+            const item = document.getElementById("selectedItem").value;
+            const qty = document.getElementById("quantity").value;
+            const address = document.getElementById("address").value;
+
+            document.getElementById("summaryName").textContent = name;
+            document.getElementById("summaryEmail").textContent = email;
+            document.getElementById("summaryItem").textContent = item;
+            document.getElementById("summaryQty").textContent = qty;
+            document.getElementById("summaryAddress").textContent = address;
+
+            document.getElementById("orderSummary").style.display = "block";
+        });
+    </script>
